@@ -16,7 +16,7 @@ namespace PrySignorileControlesBasicos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmControlesBasicos());
+            Application.Run(new frmCajaDeTexto());
         }
     }
 }
