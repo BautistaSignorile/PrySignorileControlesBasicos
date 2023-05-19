@@ -22,12 +22,12 @@ namespace PrySignorileControlesBasicos
             lblreflejo.Text = txtReflejo.Text;
         }
 
-        private void frmCajaDeTexto_Load(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void frmCajaDeTexto_Load(object sender, EventArgs e)
         {
 
         }
@@ -37,12 +37,41 @@ namespace PrySignorileControlesBasicos
             if (optAzul.Checked == true)
             {
                 lblreflejo.ForeColor = Color.Blue;
+                txtReflejo.ForeColor = Color.Blue;
             }
-
             if (optRojo.Checked == true)
             {
                 lblreflejo.ForeColor = Color.Red;
+                txtReflejo.ForeColor = Color.Red;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdSeleccionar_Click(object sender, EventArgs e)
+        {
+            string textoConcatenar = "";
+            if (chkPicante.Checked == true)
+            {
+                lblEscribir.Text = "Picante";
+                textoConcatenar = textoConcatenar + "Picante";
+            }
+            if (chkMayonesa.Checked == true)
+            {
+                lblEscribir.Text = "Mayonesa";
+                textoConcatenar = textoConcatenar + " Mayonesa";
+            }
+            if (chkKetchup.Checked == true)
+            {
+                lblEscribir.Text = "Kethup";
+                textoConcatenar = textoConcatenar + " Ketchup";
+            }
+
+            lblEscribir.Text = textoConcatenar;
+            cboAdicional.Items.Add(textoConcatenar);
         }
     }
 }
